@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_Layout";
+}
+
+<h2>About PSN Stickers</h2>
+
+<p><b>TD;RL: I reverse engineered Sony’s PlayStation Messages app to pull out the calls used to get the stickers to the app. Then I made this website around those endpoints. Boom.</b></p>
+
+<p>Also note: I make a ton of assumptions about how Sony’s PSN APIs work. I am most likely wrong, and I would love to be corrected if so.</p>
+
+<p>First, some info about me. I’m Drastic Actions. I’m a developer who works on a ton of <a href="https://github.com/drasticactions" target="_blank">open source projects</a> in my spare time (some of them are even complete!). I’ve been working on various apps using Sony’s private PSN APIs for the past few years, since they revamped them for the PS4. Currently I maintain a Windows 10 app called <a href="https://github.com/drasticactions/PlayStation-App" target="_blank">“PSN.appx”</a>, which uses the various APIs found in the official PSN apps for iOS and Android. Using <a href="https://mitmproxy.org/" target="_blank">mitmproxy</a> (which I may write about in the future explaining how exactly it’s done. It’s pretty simple, and Man in the Middle attacks are always fun), I have reverse engineered the API used by Sony’s various PlayStation apps so I, or anyone else, can use them for their own purposes. Eventually the new objects and endpoints in this new messaging app will end up in my app.</p>
+
+<p>Sony recently released a new app for iOS and Android, called PlayStation Messages, that’s let PSN users message their friends from their smart phones. Now, the original PlayStation app could do this too, but not very well. You see, the PlayStation app is mostly an HTML app that is inside an app wrapper. There are some native elements (like the PS4 remote), but most interactions you actually make in it are done in the web app. It’s held together by Backbone.js, and a ton of DOM manipulation. It’s slow, does not respect native UI styles, and works just well enough that people don’t freak out about it, but is not very good to use. </p>
+
+<p>So as a way, I’m guessing, to improve performance and port more of their app to native controls, they separated the messaging portion into its own app. That’s good! Going native enables them to get performance improvements for basically free, while being able to tailor the app to the platform. </p>
+
+<p>However, the core of the app are still the same APIs that were used in the original PlayStation app. While they are improved over the original APIs that were released with the PS4, in my opinion, are still not that good. Especially for a messaging app. Currently there is no persistence of your friends list. Every single time the app is launched, it caches your entire friends list into memory. I have 600+ PSN friends (Thanks to a batch friend app that I also wrote for Something Awful). Every time I launch the app, it has to make 20+ API calls to fill out my friends list. It makes no sense. Especially because messages themselves DO persist in a local database.</p>
+
+<p>Those calls make more sense when you see that there is no persistent connection for online status in the app. In order to see if a friend is online or not, you have to refresh the entire list, or open up their profile to see the actual, current, status. Everything is through a Rest API. Everything.</p>
+
+<p>For stickers: A endpoint to fetch some JSON is called when the app is first installed. This is a JSON array that consists of an Id and another url for a manifest file. This has an array of sticker links, a zip containing all the stickers (used in the app to download all stickers at once and use that as the cache), and another link to get the metadata for the stickers. The metadata JSON has the name of the sticker pack, and some other things like copyright. So in order to get the name of a sticker pack, you have to make three separate calls. One to get the list of packs, another to get a link to the metadata file, and then the metadata itself. That seems quite dumb to me, but I’m sure they have their reasons for doing it this way.</p>
+
+<p>These sticker calls are clear over the wire, no authentication necessary. So I took those calls, and built this quick ASP.NET 5 page. And that’s about it!</p>

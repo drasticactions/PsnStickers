@@ -1,0 +1,90 @@
+﻿@using System.Threading.Tasks
+@using PsnStickers.ViewModels
+@model PsnStickers.ViewModels.StickersViewModel
+@{
+    Layout = "_Layout";
+}
+
+<div class="row">
+    <div class="btn-group">
+        @foreach (var item in Model.Stickers.StickerImagesBySize.Sizes)
+        {
+            <a href="@item.Zip.Url" type="button" class="btn btn-default">Download @item.Size Zip</a>
+        }
+    </div>
+</div>
+
+<dl style="padding-top: 5px;" class="dl-horizontal">
+    <dt>
+        Title
+    </dt>
+
+    <dd>
+        @Model.Metadata.Title
+    </dd>
+
+    <dt>
+        Publisher
+    </dt>
+
+    <dd>
+        @Model.Metadata.Publisher
+    </dd>
+
+    <dt>
+        Description
+    </dt>
+
+    <dd>
+        @Model.Metadata.Description
+    </dd>
+
+
+    <dt>
+        Sticker Package Id
+    </dt>
+
+    <dd>
+        @Model.Metadata.StickerPackageId
+    </dd>
+
+    <dt>
+        Type
+    </dt>
+
+    <dd>
+        @Model.Metadata.Type
+    </dd>
+
+    <dt>
+        Copyright
+    </dt>
+
+    <dd>
+        @Model.Metadata.Copyright
+    </dd>
+</dl>
+
+<h3>Click on any image to copy URL to your clipboard</h3>
+
+@foreach (var item in Model.Stickers.StickerImagesBySize.Sizes)
+{
+    <h2>@item.Size</h2>
+        <div class="row">
+            @foreach (var url in item.Urls)
+            {
+                <div class="col-lg-3 col-sm-4 col-xs-6">
+                    <a style="cursor: pointer;" class="img-button thumbnail" data-clipboard-text="@url">
+                        <img src="@url" class="img-responsive">
+                    </a>
+                </div>
+            }
+        </div>
+}
+
+@section scripts
+{
+    <script>
+            new Clipboard('.img-button');
+    </script>
+}

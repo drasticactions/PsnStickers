@@ -1,0 +1,32 @@
+﻿@using System.Threading.Tasks
+@using PsnStickers.ViewModels
+@model PsnStickers.ViewModels.HomeViewModel
+@{
+    Layout = "_Layout";
+}
+
+<div class="row">
+    <div class="btn-group">
+        <a target="_blank" href="http://static-resource.np.community.playstation.net/sticker/presetList_JP.json" class="btn btn-default" type="button">Raw Sticker Manifest (JSON)</a>
+    </div>
+</div>
+
+<div class="row">
+    <h2>Quick Plug: </h2>
+    <h3>Download PSN.appx, your gateway to the PlayStation Network on Windows 10! It's free! It's <a href="https://github.com/drasticactions/PlayStation-App">open source</a>! No ads! It should be pleasant to use!
+    </h3>
+    <a href="https://www.microsoft.com/store/apps/9nblggh6cvbj" class="img-responsive"><img src="http://i.imgur.com/gkuUNgf.jpg"/></a>
+</div>
+
+<div class="row">
+    <h2>Stickers: </h2>
+
+    @foreach (var item in Model.Stickers)
+    {
+        <div class="col-lg-3 col-sm-4 col-xs-6">
+            <a asp-controller="Stickers" asp-action="Index" asp-route-id="@item.Id" class="thumbnail">
+                <img src="@item.Thumbnail" class="img-responsive">
+            </a>
+        </div>
+    }
+</div>
