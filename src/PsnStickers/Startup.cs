@@ -30,6 +30,8 @@ namespace PsnStickers
                 // This reads the configuration keys from the secret store.
                 // For more details on using the user secret store see http://go.microsoft.com/fwlink/?LinkID=532709
                 //builder.AddUserSecrets();
+
+            builder.AddApplicationInsightsSettings(developerMode: true);
             }
             builder.AddEnvironmentVariables();
             Configuration = builder.Build();
@@ -42,6 +44,8 @@ namespace PsnStickers
         {
             // Add MVC services to the services container.
             services.AddMvc();
+
+            services.AddApplicationInsightsTelemetry(Configuration);
         }
 
         // Configure is called after ConfigureServices is called.
@@ -50,6 +54,9 @@ namespace PsnStickers
             loggerFactory.MinimumLevel = LogLevel.Information;
             loggerFactory.AddConsole();
             loggerFactory.AddDebug();
+
+            // Add Application Insights monitoring to the request pipeline as a very first middleware.
+            app.UseApplicationInsightsRequestTelemetry();
 
             // Configure the HTTP request pipeline.
 
@@ -65,6 +72,9 @@ namespace PsnStickers
                 // sends the request to the following path or controller action.
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            // Add Application Insights exceptions handling to the request pipeline.
+            app.UseApplicationInsightsExceptionTelemetry();
 
             // Add the platform handler to the request pipeline.
             app.UseIISPlatformHandler();

@@ -79,6 +79,40 @@
           "lib/net45/System.Interactive.Async.dll": {}
         }
       },
+      "Microsoft.ApplicationInsights/1.1.1-beta": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.ApplicationInsights.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.AspNet/1.0.0-rc1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "1.1.1-beta",
+          "Microsoft.AspNet.Hosting.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Features": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "Microsoft.Extensions.Configuration": "1.0.0-rc1-final",
+          "Microsoft.Extensions.DiagnosticAdapter": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Microsoft.ApplicationInsights.AspNet.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.ApplicationInsights.AspNet.dll": {}
+        }
+      },
       "Microsoft.AspNet.Antiforgery/1.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -1261,6 +1295,28 @@
           "lib/net451/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
+      "Microsoft.Extensions.DiagnosticAdapter/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc1-final",
+          "System.Diagnostics.DiagnosticSource": "4.0.0-beta-23516"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Collections.Concurrent",
+          "System.Core",
+          "System.Linq",
+          "System.Runtime"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.Extensions.DiagnosticAdapter.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Extensions.DiagnosticAdapter.dll": {}
+        }
+      },
       "Microsoft.Extensions.FileSystemGlobbing/1.0.0-rc1-final": {
         "type": "package",
         "frameworkAssemblies": [
@@ -1840,6 +1896,57 @@
         },
         "runtime": {
           "lib/portable-windows8+net45+wp8/System.Interactive.Async.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights/1.1.1-beta": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10-beta-22816",
+          "System.Diagnostics.Debug": "4.0.10-beta-22816",
+          "System.Diagnostics.Tools": "4.0.0-beta-22816",
+          "System.Diagnostics.Tracing": "4.0.20-beta-22816",
+          "System.Globalization": "4.0.10-beta-22816",
+          "System.IO": "4.0.10-beta-22816",
+          "System.IO.Compression": "4.0.0-beta-22816",
+          "System.Linq": "4.0.0-beta-22816",
+          "System.Net.Http": "4.0.0-beta-22816",
+          "System.Reflection": "4.0.10-beta-22816",
+          "System.Reflection.Extensions": "4.0.0-beta-22816",
+          "System.Runtime": "4.0.20-beta-22816",
+          "System.Runtime.Extensions": "4.0.10-beta-22816",
+          "System.Text.Encoding": "4.0.10-beta-22816",
+          "System.Text.Encoding.Extensions": "4.0.10-beta-22816",
+          "System.Text.RegularExpressions": "4.0.10-beta-22816",
+          "System.Threading": "4.0.10-beta-22816",
+          "System.Threading.Tasks": "4.0.10-beta-22816",
+          "System.Xml.XDocument": "4.0.0-beta-22816"
+        },
+        "compile": {
+          "lib/dnxcore50/Microsoft.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Microsoft.ApplicationInsights.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.AspNet/1.0.0-rc1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "1.1.1-beta",
+          "Microsoft.AspNet.Hosting.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Features": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "Microsoft.Extensions.Configuration": "1.0.0-rc1-final",
+          "Microsoft.Extensions.DiagnosticAdapter": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final",
+          "System.Net.NameResolution": "4.0.0-beta-23302",
+          "System.Reflection": "4.0.10-beta-23109"
+        },
+        "compile": {
+          "lib/dnxcore50/Microsoft.ApplicationInsights.AspNet.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Microsoft.ApplicationInsights.AspNet.dll": {}
         }
       },
       "Microsoft.AspNet.Antiforgery/1.0.0-rc1-final": {
@@ -2854,6 +2961,35 @@
           "lib/dotnet5.4/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
+      "Microsoft.Extensions.DiagnosticAdapter/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc1-final",
+          "System.Collections": "4.0.11-beta-23516",
+          "System.Collections.Concurrent": "4.0.11-beta-23516",
+          "System.ComponentModel": "4.0.1-beta-23516",
+          "System.Diagnostics.Debug": "4.0.11-beta-23516",
+          "System.Diagnostics.DiagnosticSource": "4.0.0-beta-23516",
+          "System.Globalization": "4.0.11-beta-23516",
+          "System.Linq": "4.0.1-beta-23516",
+          "System.Linq.Expressions": "4.0.11-beta-23516",
+          "System.Reflection": "4.1.0-beta-23225",
+          "System.Reflection.Emit": "4.0.1-beta-23516",
+          "System.Reflection.Emit.Lightweight": "4.0.1-beta-23516",
+          "System.Reflection.Extensions": "4.0.1-beta-23516",
+          "System.Reflection.TypeExtensions": "4.0.1-beta-23409",
+          "System.Resources.ResourceManager": "4.0.1-beta-23516",
+          "System.Runtime": "4.0.21-beta-23516",
+          "System.Runtime.Extensions": "4.0.11-beta-23516",
+          "System.Threading": "4.0.11-beta-23516"
+        },
+        "compile": {
+          "lib/dotnet5.4/Microsoft.Extensions.DiagnosticAdapter.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet5.4/Microsoft.Extensions.DiagnosticAdapter.dll": {}
+        }
+      },
       "Microsoft.Extensions.FileSystemGlobbing/1.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -3523,6 +3659,20 @@
           "lib/DNXCore50/System.IO.dll": {}
         }
       },
+      "System.IO.Compression/4.0.0-beta-22816": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.0.10-beta-22816",
+          "System.Runtime": "4.0.20-beta-22816",
+          "System.Text.Encoding": "4.0.10-beta-22816"
+        },
+        "compile": {
+          "lib/contract/System.IO.Compression.dll": {}
+        },
+        "runtime": {
+          "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.IO.Compression.dll": {}
+        }
+      },
       "System.IO.FileSystem/4.0.1-beta-23516": {
         "type": "package",
         "dependencies": {
@@ -3613,6 +3763,17 @@
         },
         "compile": {
           "ref/dotnet5.2/System.Net.Http.dll": {}
+        }
+      },
+      "System.Net.NameResolution/4.0.0-beta-23409": {
+        "type": "package",
+        "dependencies": {
+          "System.Net.Primitives": "4.0.10",
+          "System.Runtime": "4.0.0",
+          "System.Threading.Tasks": "4.0.0"
+        },
+        "compile": {
+          "ref/dotnet/System.Net.NameResolution.dll": {}
         }
       },
       "System.Net.Primitives/4.0.11-beta-23516": {
@@ -3733,7 +3894,7 @@
           "lib/DNXCore50/System.Reflection.dll": {}
         }
       },
-      "System.Reflection.Emit/4.0.0": {
+      "System.Reflection.Emit/4.0.1-beta-23516": {
         "type": "package",
         "dependencies": {
           "System.IO": "4.0.0",
@@ -3743,7 +3904,7 @@
           "System.Runtime": "4.0.0"
         },
         "compile": {
-          "ref/dotnet/System.Reflection.Emit.dll": {}
+          "ref/dotnet5.2/System.Reflection.Emit.dll": {}
         },
         "runtime": {
           "lib/DNXCore50/System.Reflection.Emit.dll": {}
@@ -3761,6 +3922,21 @@
         },
         "runtime": {
           "lib/DNXCore50/System.Reflection.Emit.ILGeneration.dll": {}
+        }
+      },
+      "System.Reflection.Emit.Lightweight/4.0.1-beta-23516": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection": "4.0.0",
+          "System.Reflection.Emit.ILGeneration": "4.0.0",
+          "System.Reflection.Primitives": "4.0.0",
+          "System.Runtime": "4.0.0"
+        },
+        "compile": {
+          "ref/dotnet5.1/System.Reflection.Emit.Lightweight.dll": {}
+        },
+        "runtime": {
+          "lib/DNXCore50/System.Reflection.Emit.Lightweight.dll": {}
         }
       },
       "System.Reflection.Extensions/4.0.1-beta-23516": {
@@ -4294,6 +4470,40 @@
         },
         "runtime": {
           "lib/net45/System.Interactive.Async.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights/1.1.1-beta": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.ApplicationInsights.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.AspNet/1.0.0-rc1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "1.1.1-beta",
+          "Microsoft.AspNet.Hosting.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Features": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "Microsoft.Extensions.Configuration": "1.0.0-rc1-final",
+          "Microsoft.Extensions.DiagnosticAdapter": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Microsoft.ApplicationInsights.AspNet.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.ApplicationInsights.AspNet.dll": {}
         }
       },
       "Microsoft.AspNet.Antiforgery/1.0.0-rc1-final": {
@@ -5479,6 +5689,28 @@
         },
         "runtime": {
           "lib/net451/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DiagnosticAdapter/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc1-final",
+          "System.Diagnostics.DiagnosticSource": "4.0.0-beta-23516"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Collections.Concurrent",
+          "System.Core",
+          "System.Linq",
+          "System.Runtime"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.Extensions.DiagnosticAdapter.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Extensions.DiagnosticAdapter.dll": {}
         }
       },
       "Microsoft.Extensions.FileSystemGlobbing/1.0.0-rc1-final": {
@@ -6081,6 +6313,40 @@
           "lib/net45/System.Interactive.Async.dll": {}
         }
       },
+      "Microsoft.ApplicationInsights/1.1.1-beta": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.ApplicationInsights.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.AspNet/1.0.0-rc1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "1.1.1-beta",
+          "Microsoft.AspNet.Hosting.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Features": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "Microsoft.Extensions.Configuration": "1.0.0-rc1-final",
+          "Microsoft.Extensions.DiagnosticAdapter": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Microsoft.ApplicationInsights.AspNet.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.ApplicationInsights.AspNet.dll": {}
+        }
+      },
       "Microsoft.AspNet.Antiforgery/1.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -7266,6 +7532,28 @@
           "lib/net451/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
+      "Microsoft.Extensions.DiagnosticAdapter/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc1-final",
+          "System.Diagnostics.DiagnosticSource": "4.0.0-beta-23516"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Collections.Concurrent",
+          "System.Core",
+          "System.Linq",
+          "System.Runtime"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.Extensions.DiagnosticAdapter.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Extensions.DiagnosticAdapter.dll": {}
+        }
+      },
       "Microsoft.Extensions.FileSystemGlobbing/1.0.0-rc1-final": {
         "type": "package",
         "frameworkAssemblies": [
@@ -7851,6 +8139,57 @@
         },
         "runtime": {
           "lib/portable-windows8+net45+wp8/System.Interactive.Async.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights/1.1.1-beta": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10-beta-22816",
+          "System.Diagnostics.Debug": "4.0.10-beta-22816",
+          "System.Diagnostics.Tools": "4.0.0-beta-22816",
+          "System.Diagnostics.Tracing": "4.0.20-beta-22816",
+          "System.Globalization": "4.0.10-beta-22816",
+          "System.IO": "4.0.10-beta-22816",
+          "System.IO.Compression": "4.0.0-beta-22816",
+          "System.Linq": "4.0.0-beta-22816",
+          "System.Net.Http": "4.0.0-beta-22816",
+          "System.Reflection": "4.0.10-beta-22816",
+          "System.Reflection.Extensions": "4.0.0-beta-22816",
+          "System.Runtime": "4.0.20-beta-22816",
+          "System.Runtime.Extensions": "4.0.10-beta-22816",
+          "System.Text.Encoding": "4.0.10-beta-22816",
+          "System.Text.Encoding.Extensions": "4.0.10-beta-22816",
+          "System.Text.RegularExpressions": "4.0.10-beta-22816",
+          "System.Threading": "4.0.10-beta-22816",
+          "System.Threading.Tasks": "4.0.10-beta-22816",
+          "System.Xml.XDocument": "4.0.0-beta-22816"
+        },
+        "compile": {
+          "lib/dnxcore50/Microsoft.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Microsoft.ApplicationInsights.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.AspNet/1.0.0-rc1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "1.1.1-beta",
+          "Microsoft.AspNet.Hosting.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Features": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "Microsoft.Extensions.Configuration": "1.0.0-rc1-final",
+          "Microsoft.Extensions.DiagnosticAdapter": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final",
+          "System.Net.NameResolution": "4.0.0-beta-23302",
+          "System.Reflection": "4.0.10-beta-23109"
+        },
+        "compile": {
+          "lib/dnxcore50/Microsoft.ApplicationInsights.AspNet.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Microsoft.ApplicationInsights.AspNet.dll": {}
         }
       },
       "Microsoft.AspNet.Antiforgery/1.0.0-rc1-final": {
@@ -8868,6 +9207,35 @@
           "lib/dotnet5.4/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
+      "Microsoft.Extensions.DiagnosticAdapter/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc1-final",
+          "System.Collections": "4.0.11-beta-23516",
+          "System.Collections.Concurrent": "4.0.11-beta-23516",
+          "System.ComponentModel": "4.0.1-beta-23516",
+          "System.Diagnostics.Debug": "4.0.11-beta-23516",
+          "System.Diagnostics.DiagnosticSource": "4.0.0-beta-23516",
+          "System.Globalization": "4.0.11-beta-23516",
+          "System.Linq": "4.0.1-beta-23516",
+          "System.Linq.Expressions": "4.0.11-beta-23516",
+          "System.Reflection": "4.1.0-beta-23225",
+          "System.Reflection.Emit": "4.0.1-beta-23516",
+          "System.Reflection.Emit.Lightweight": "4.0.1-beta-23516",
+          "System.Reflection.Extensions": "4.0.1-beta-23516",
+          "System.Reflection.TypeExtensions": "4.0.1-beta-23409",
+          "System.Resources.ResourceManager": "4.0.1-beta-23516",
+          "System.Runtime": "4.0.21-beta-23516",
+          "System.Runtime.Extensions": "4.0.11-beta-23516",
+          "System.Threading": "4.0.11-beta-23516"
+        },
+        "compile": {
+          "lib/dotnet5.4/Microsoft.Extensions.DiagnosticAdapter.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet5.4/Microsoft.Extensions.DiagnosticAdapter.dll": {}
+        }
+      },
       "Microsoft.Extensions.FileSystemGlobbing/1.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -9359,6 +9727,18 @@
         },
         "runtime": {
           "runtimes/win7/lib/DNXCore50/System.Net.Http.dll": {}
+        }
+      },
+      "runtime.win7.System.Net.NameResolution/4.0.0-beta-23409": {
+        "type": "package",
+        "dependencies": {
+          "System.Private.Networking": "4.0.1-beta-23409"
+        },
+        "compile": {
+          "ref/dotnet/_._": {}
+        },
+        "runtime": {
+          "lib/DNXCore50/System.Net.NameResolution.dll": {}
         }
       },
       "runtime.win7.System.Net.Primitives/4.0.11-beta-23516": {
@@ -9932,6 +10312,17 @@
           "ref/dotnet5.2/System.Net.Http.dll": {}
         }
       },
+      "System.Net.NameResolution/4.0.0-beta-23409": {
+        "type": "package",
+        "dependencies": {
+          "System.Net.Primitives": "4.0.10",
+          "System.Runtime": "4.0.0",
+          "System.Threading.Tasks": "4.0.0"
+        },
+        "compile": {
+          "ref/dotnet/System.Net.NameResolution.dll": {}
+        }
+      },
       "System.Net.Primitives/4.0.11-beta-23516": {
         "type": "package",
         "dependencies": {
@@ -10052,7 +10443,7 @@
           "lib/DNXCore50/System.Reflection.dll": {}
         }
       },
-      "System.Reflection.Emit/4.0.0": {
+      "System.Reflection.Emit/4.0.1-beta-23516": {
         "type": "package",
         "dependencies": {
           "System.IO": "4.0.0",
@@ -10062,7 +10453,7 @@
           "System.Runtime": "4.0.0"
         },
         "compile": {
-          "ref/dotnet/System.Reflection.Emit.dll": {}
+          "ref/dotnet5.2/System.Reflection.Emit.dll": {}
         },
         "runtime": {
           "lib/DNXCore50/System.Reflection.Emit.dll": {}
@@ -10082,7 +10473,7 @@
           "lib/DNXCore50/System.Reflection.Emit.ILGeneration.dll": {}
         }
       },
-      "System.Reflection.Emit.Lightweight/4.0.0": {
+      "System.Reflection.Emit.Lightweight/4.0.1-beta-23516": {
         "type": "package",
         "dependencies": {
           "System.Reflection": "4.0.0",
@@ -10091,7 +10482,7 @@
           "System.Runtime": "4.0.0"
         },
         "compile": {
-          "ref/dotnet/System.Reflection.Emit.Lightweight.dll": {}
+          "ref/dotnet5.1/System.Reflection.Emit.Lightweight.dll": {}
         },
         "runtime": {
           "lib/DNXCore50/System.Reflection.Emit.Lightweight.dll": {}
@@ -10673,6 +11064,57 @@
         },
         "runtime": {
           "lib/portable-windows8+net45+wp8/System.Interactive.Async.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights/1.1.1-beta": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10-beta-22816",
+          "System.Diagnostics.Debug": "4.0.10-beta-22816",
+          "System.Diagnostics.Tools": "4.0.0-beta-22816",
+          "System.Diagnostics.Tracing": "4.0.20-beta-22816",
+          "System.Globalization": "4.0.10-beta-22816",
+          "System.IO": "4.0.10-beta-22816",
+          "System.IO.Compression": "4.0.0-beta-22816",
+          "System.Linq": "4.0.0-beta-22816",
+          "System.Net.Http": "4.0.0-beta-22816",
+          "System.Reflection": "4.0.10-beta-22816",
+          "System.Reflection.Extensions": "4.0.0-beta-22816",
+          "System.Runtime": "4.0.20-beta-22816",
+          "System.Runtime.Extensions": "4.0.10-beta-22816",
+          "System.Text.Encoding": "4.0.10-beta-22816",
+          "System.Text.Encoding.Extensions": "4.0.10-beta-22816",
+          "System.Text.RegularExpressions": "4.0.10-beta-22816",
+          "System.Threading": "4.0.10-beta-22816",
+          "System.Threading.Tasks": "4.0.10-beta-22816",
+          "System.Xml.XDocument": "4.0.0-beta-22816"
+        },
+        "compile": {
+          "lib/dnxcore50/Microsoft.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Microsoft.ApplicationInsights.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.AspNet/1.0.0-rc1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "1.1.1-beta",
+          "Microsoft.AspNet.Hosting.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Features": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+          "Microsoft.Extensions.Configuration": "1.0.0-rc1-final",
+          "Microsoft.Extensions.DiagnosticAdapter": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final",
+          "System.Net.NameResolution": "4.0.0-beta-23302",
+          "System.Reflection": "4.0.10-beta-23109"
+        },
+        "compile": {
+          "lib/dnxcore50/Microsoft.ApplicationInsights.AspNet.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Microsoft.ApplicationInsights.AspNet.dll": {}
         }
       },
       "Microsoft.AspNet.Antiforgery/1.0.0-rc1-final": {
@@ -11690,6 +12132,35 @@
           "lib/dotnet5.4/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
+      "Microsoft.Extensions.DiagnosticAdapter/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc1-final",
+          "System.Collections": "4.0.11-beta-23516",
+          "System.Collections.Concurrent": "4.0.11-beta-23516",
+          "System.ComponentModel": "4.0.1-beta-23516",
+          "System.Diagnostics.Debug": "4.0.11-beta-23516",
+          "System.Diagnostics.DiagnosticSource": "4.0.0-beta-23516",
+          "System.Globalization": "4.0.11-beta-23516",
+          "System.Linq": "4.0.1-beta-23516",
+          "System.Linq.Expressions": "4.0.11-beta-23516",
+          "System.Reflection": "4.1.0-beta-23225",
+          "System.Reflection.Emit": "4.0.1-beta-23516",
+          "System.Reflection.Emit.Lightweight": "4.0.1-beta-23516",
+          "System.Reflection.Extensions": "4.0.1-beta-23516",
+          "System.Reflection.TypeExtensions": "4.0.1-beta-23409",
+          "System.Resources.ResourceManager": "4.0.1-beta-23516",
+          "System.Runtime": "4.0.21-beta-23516",
+          "System.Runtime.Extensions": "4.0.11-beta-23516",
+          "System.Threading": "4.0.11-beta-23516"
+        },
+        "compile": {
+          "lib/dotnet5.4/Microsoft.Extensions.DiagnosticAdapter.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet5.4/Microsoft.Extensions.DiagnosticAdapter.dll": {}
+        }
+      },
       "Microsoft.Extensions.FileSystemGlobbing/1.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -12181,6 +12652,18 @@
         },
         "runtime": {
           "runtimes/win7/lib/DNXCore50/System.Net.Http.dll": {}
+        }
+      },
+      "runtime.win7.System.Net.NameResolution/4.0.0-beta-23409": {
+        "type": "package",
+        "dependencies": {
+          "System.Private.Networking": "4.0.1-beta-23409"
+        },
+        "compile": {
+          "ref/dotnet/_._": {}
+        },
+        "runtime": {
+          "lib/DNXCore50/System.Net.NameResolution.dll": {}
         }
       },
       "runtime.win7.System.Net.Primitives/4.0.11-beta-23516": {
@@ -12754,6 +13237,17 @@
           "ref/dotnet5.2/System.Net.Http.dll": {}
         }
       },
+      "System.Net.NameResolution/4.0.0-beta-23409": {
+        "type": "package",
+        "dependencies": {
+          "System.Net.Primitives": "4.0.10",
+          "System.Runtime": "4.0.0",
+          "System.Threading.Tasks": "4.0.0"
+        },
+        "compile": {
+          "ref/dotnet/System.Net.NameResolution.dll": {}
+        }
+      },
       "System.Net.Primitives/4.0.11-beta-23516": {
         "type": "package",
         "dependencies": {
@@ -12874,7 +13368,7 @@
           "lib/DNXCore50/System.Reflection.dll": {}
         }
       },
-      "System.Reflection.Emit/4.0.0": {
+      "System.Reflection.Emit/4.0.1-beta-23516": {
         "type": "package",
         "dependencies": {
           "System.IO": "4.0.0",
@@ -12884,7 +13378,7 @@
           "System.Runtime": "4.0.0"
         },
         "compile": {
-          "ref/dotnet/System.Reflection.Emit.dll": {}
+          "ref/dotnet5.2/System.Reflection.Emit.dll": {}
         },
         "runtime": {
           "lib/DNXCore50/System.Reflection.Emit.dll": {}
@@ -12904,7 +13398,7 @@
           "lib/DNXCore50/System.Reflection.Emit.ILGeneration.dll": {}
         }
       },
-      "System.Reflection.Emit.Lightweight/4.0.0": {
+      "System.Reflection.Emit.Lightweight/4.0.1-beta-23516": {
         "type": "package",
         "dependencies": {
           "System.Reflection": "4.0.0",
@@ -12913,7 +13407,7 @@
           "System.Runtime": "4.0.0"
         },
         "compile": {
-          "ref/dotnet/System.Reflection.Emit.Lightweight.dll": {}
+          "ref/dotnet5.1/System.Reflection.Emit.Lightweight.dll": {}
         },
         "runtime": {
           "lib/DNXCore50/System.Reflection.Emit.Lightweight.dll": {}
@@ -13482,6 +13976,38 @@
         "lib/net45/System.Interactive.Async.XML",
         "lib/portable-windows8+net45+wp8/System.Interactive.Async.dll",
         "lib/portable-windows8+net45+wp8/System.Interactive.Async.XML"
+      ]
+    },
+    "Microsoft.ApplicationInsights/1.1.1-beta": {
+      "type": "package",
+      "sha512": "aqtQ8KNFMGBFCmU3kkkEM7PlyPFvfh/1uKTxixD+myMzB9EjYeGOf0LvFnpkT1sp3voXfU8MUN+eYets8TutdQ==",
+      "files": [
+        "lib/dnxcore50/Microsoft.ApplicationInsights.dll",
+        "lib/dnxcore50/Microsoft.ApplicationInsights.XML",
+        "lib/net40/Microsoft.ApplicationInsights.dll",
+        "lib/net40/Microsoft.ApplicationInsights.XML",
+        "lib/net45/Microsoft.ApplicationInsights.dll",
+        "lib/net45/Microsoft.ApplicationInsights.XML",
+        "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll",
+        "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.XML",
+        "lib/wp8/Microsoft.ApplicationInsights.dll",
+        "lib/wp8/Microsoft.ApplicationInsights.XML",
+        "Microsoft.ApplicationInsights.1.1.1-beta.nupkg",
+        "Microsoft.ApplicationInsights.1.1.1-beta.nupkg.sha512",
+        "Microsoft.ApplicationInsights.nuspec"
+      ]
+    },
+    "Microsoft.ApplicationInsights.AspNet/1.0.0-rc1": {
+      "type": "package",
+      "sha512": "cFxg3E6Z9otsuBOKhiLqxb5H/B6wbvjvMfu+v3wG8KEJvZ2ZAzNhAXbxE69baweyWzokj5nsI+9YeSXNWacBHA==",
+      "files": [
+        "lib/dnx451/Microsoft.ApplicationInsights.AspNet.dll",
+        "lib/dnx451/Microsoft.ApplicationInsights.AspNet.xml",
+        "lib/dnxcore50/Microsoft.ApplicationInsights.AspNet.dll",
+        "lib/dnxcore50/Microsoft.ApplicationInsights.AspNet.xml",
+        "Microsoft.ApplicationInsights.AspNet.1.0.0-rc1.nupkg",
+        "Microsoft.ApplicationInsights.AspNet.1.0.0-rc1.nupkg.sha512",
+        "Microsoft.ApplicationInsights.AspNet.nuspec"
       ]
     },
     "Microsoft.AspNet.Antiforgery/1.0.0-rc1-final": {
@@ -14427,6 +14953,20 @@
         "Microsoft.Extensions.DependencyInjection.Abstractions.nuspec"
       ]
     },
+    "Microsoft.Extensions.DiagnosticAdapter/1.0.0-rc1-final": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "E3gpaMweF1ikFox8xcx4iy8sO/84SlF3eRb0OmRIvWoVqqjfceeG4vsZ+4a4Zo36rCqT8eoTwH0VLZUX8UF3RQ==",
+      "files": [
+        "lib/dotnet5.4/Microsoft.Extensions.DiagnosticAdapter.dll",
+        "lib/dotnet5.4/Microsoft.Extensions.DiagnosticAdapter.xml",
+        "lib/net451/Microsoft.Extensions.DiagnosticAdapter.dll",
+        "lib/net451/Microsoft.Extensions.DiagnosticAdapter.xml",
+        "Microsoft.Extensions.DiagnosticAdapter.1.0.0-rc1-final.nupkg",
+        "Microsoft.Extensions.DiagnosticAdapter.1.0.0-rc1-final.nupkg.sha512",
+        "Microsoft.Extensions.DiagnosticAdapter.nuspec"
+      ]
+    },
     "Microsoft.Extensions.FileSystemGlobbing/1.0.0-rc1-final": {
       "type": "package",
       "serviceable": true,
@@ -14883,6 +15423,18 @@
         "runtime.win7.System.Net.Http.nuspec",
         "runtimes/win7/lib/DNXCore50/System.Net.Http.dll",
         "runtimes/win7/lib/netcore50/System.Net.Http.dll"
+      ]
+    },
+    "runtime.win7.System.Net.NameResolution/4.0.0-beta-23409": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "AWBa/n54te5ZOp1aTt4shtjqL4tdMie0LyiP03fphqyY4B9pvnU1XfOzljS1DFZyHhWdlUtNfMHDcGwMYYmggQ==",
+      "files": [
+        "lib/DNXCore50/System.Net.NameResolution.dll",
+        "ref/dotnet/_._",
+        "runtime.win7.System.Net.NameResolution.4.0.0-beta-23409.nupkg",
+        "runtime.win7.System.Net.NameResolution.4.0.0-beta-23409.nupkg.sha512",
+        "runtime.win7.System.Net.NameResolution.nuspec"
       ]
     },
     "runtime.win7.System.Net.Primitives/4.0.11-beta-23516": {
@@ -16225,6 +16777,20 @@
         "System.IO.nuspec"
       ]
     },
+    "System.IO.Compression/4.0.0-beta-22816": {
+      "type": "package",
+      "sha512": "XLIvFYkpjuAHSr9H7mjtv6sfv4kkSAWJ+ysVO4/KzCDRjYqs9Fl50PnuDkOfBJBoIf5BrWY+GF+4xj4WFBHb/Q==",
+      "files": [
+        "lib/aspnetcore50/System.IO.Compression.dll",
+        "lib/contract/System.IO.Compression.dll",
+        "lib/net45/_._",
+        "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.IO.Compression.dll",
+        "License.rtf",
+        "System.IO.Compression.4.0.0-beta-22816.nupkg",
+        "System.IO.Compression.4.0.0-beta-22816.nupkg.sha512",
+        "System.IO.Compression.nuspec"
+      ]
+    },
     "System.IO.Compression/4.0.0": {
       "type": "package",
       "serviceable": true,
@@ -16577,6 +17143,28 @@
         "System.Net.Http.nuspec"
       ]
     },
+    "System.Net.NameResolution/4.0.0-beta-23409": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "c3hPApsOGHYYWFaTcMjCNzHY8+oGYWkC91xy/M4ME0zW6hkhYJzcHSgYYL2+BYWxtGHRTiYdWXj6HQM7ykZ7iw==",
+      "files": [
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Net.NameResolution.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "ref/dotnet/System.Net.NameResolution.dll",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Net.NameResolution.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "runtime.json",
+        "System.Net.NameResolution.4.0.0-beta-23409.nupkg",
+        "System.Net.NameResolution.4.0.0-beta-23409.nupkg.sha512",
+        "System.Net.NameResolution.nuspec"
+      ]
+    },
     "System.Net.Primitives/4.0.11-beta-23516": {
       "type": "package",
       "serviceable": true,
@@ -16907,31 +17495,33 @@
         "System.Reflection.nuspec"
       ]
     },
-    "System.Reflection.Emit/4.0.0": {
+    "System.Reflection.Emit/4.0.1-beta-23516": {
       "type": "package",
-      "sha512": "CqnQz5LbNbiSxN10cv3Ehnw3j1UZOBCxnE0OO0q/keGQ5ENjyFM6rIG4gm/i0dX6EjdpYkAgKcI/mhZZCaBq4A==",
+      "serviceable": true,
+      "sha512": "3j5EhKPGh7cbUu5QLP1RAabvjNIpJOr5hA1Ip5UQ4ozccUb6Fd3SZiP4VKpqm/RyVAZDnOc9vdNuazZebtJeHw==",
       "files": [
         "lib/DNXCore50/System.Reflection.Emit.dll",
         "lib/MonoAndroid10/_._",
         "lib/net45/_._",
         "lib/netcore50/System.Reflection.Emit.dll",
         "lib/xamarinmac20/_._",
-        "ref/dotnet/de/System.Reflection.Emit.xml",
-        "ref/dotnet/es/System.Reflection.Emit.xml",
-        "ref/dotnet/fr/System.Reflection.Emit.xml",
-        "ref/dotnet/it/System.Reflection.Emit.xml",
-        "ref/dotnet/ja/System.Reflection.Emit.xml",
-        "ref/dotnet/ko/System.Reflection.Emit.xml",
-        "ref/dotnet/ru/System.Reflection.Emit.xml",
-        "ref/dotnet/System.Reflection.Emit.dll",
-        "ref/dotnet/System.Reflection.Emit.xml",
-        "ref/dotnet/zh-hans/System.Reflection.Emit.xml",
-        "ref/dotnet/zh-hant/System.Reflection.Emit.xml",
+        "ref/dotnet5.2/de/System.Reflection.Emit.xml",
+        "ref/dotnet5.2/es/System.Reflection.Emit.xml",
+        "ref/dotnet5.2/fr/System.Reflection.Emit.xml",
+        "ref/dotnet5.2/it/System.Reflection.Emit.xml",
+        "ref/dotnet5.2/ja/System.Reflection.Emit.xml",
+        "ref/dotnet5.2/ko/System.Reflection.Emit.xml",
+        "ref/dotnet5.2/ru/System.Reflection.Emit.xml",
+        "ref/dotnet5.2/System.Reflection.Emit.dll",
+        "ref/dotnet5.2/System.Reflection.Emit.xml",
+        "ref/dotnet5.2/zh-hans/System.Reflection.Emit.xml",
+        "ref/dotnet5.2/zh-hant/System.Reflection.Emit.xml",
         "ref/MonoAndroid10/_._",
         "ref/net45/_._",
         "ref/xamarinmac20/_._",
-        "System.Reflection.Emit.4.0.0.nupkg",
-        "System.Reflection.Emit.4.0.0.nupkg.sha512",
+        "runtimes/aot/lib/netcore50/_._",
+        "System.Reflection.Emit.4.0.1-beta-23516.nupkg",
+        "System.Reflection.Emit.4.0.1-beta-23516.nupkg.sha512",
         "System.Reflection.Emit.nuspec"
       ]
     },
@@ -16961,29 +17551,31 @@
         "System.Reflection.Emit.ILGeneration.nuspec"
       ]
     },
-    "System.Reflection.Emit.Lightweight/4.0.0": {
+    "System.Reflection.Emit.Lightweight/4.0.1-beta-23516": {
       "type": "package",
-      "sha512": "DJZhHiOdkN08xJgsJfDjkuOreLLmMcU8qkEEqEHqyhkPUZMMQs0lE8R+6+68BAFWgcdzxtNu0YmIOtEug8j00w==",
+      "serviceable": true,
+      "sha512": "9vz9sp0DUT6DfaNH7s+slhND8uBxTSQan0/O4lvCn/MWPlpwqqmUTciS/GhkRuPfnCPWaGDLTk1Kt2p5pqVcKg==",
       "files": [
         "lib/DNXCore50/System.Reflection.Emit.Lightweight.dll",
         "lib/net45/_._",
         "lib/netcore50/System.Reflection.Emit.Lightweight.dll",
         "lib/wp80/_._",
-        "ref/dotnet/de/System.Reflection.Emit.Lightweight.xml",
-        "ref/dotnet/es/System.Reflection.Emit.Lightweight.xml",
-        "ref/dotnet/fr/System.Reflection.Emit.Lightweight.xml",
-        "ref/dotnet/it/System.Reflection.Emit.Lightweight.xml",
-        "ref/dotnet/ja/System.Reflection.Emit.Lightweight.xml",
-        "ref/dotnet/ko/System.Reflection.Emit.Lightweight.xml",
-        "ref/dotnet/ru/System.Reflection.Emit.Lightweight.xml",
-        "ref/dotnet/System.Reflection.Emit.Lightweight.dll",
-        "ref/dotnet/System.Reflection.Emit.Lightweight.xml",
-        "ref/dotnet/zh-hans/System.Reflection.Emit.Lightweight.xml",
-        "ref/dotnet/zh-hant/System.Reflection.Emit.Lightweight.xml",
+        "ref/dotnet5.1/de/System.Reflection.Emit.Lightweight.xml",
+        "ref/dotnet5.1/es/System.Reflection.Emit.Lightweight.xml",
+        "ref/dotnet5.1/fr/System.Reflection.Emit.Lightweight.xml",
+        "ref/dotnet5.1/it/System.Reflection.Emit.Lightweight.xml",
+        "ref/dotnet5.1/ja/System.Reflection.Emit.Lightweight.xml",
+        "ref/dotnet5.1/ko/System.Reflection.Emit.Lightweight.xml",
+        "ref/dotnet5.1/ru/System.Reflection.Emit.Lightweight.xml",
+        "ref/dotnet5.1/System.Reflection.Emit.Lightweight.dll",
+        "ref/dotnet5.1/System.Reflection.Emit.Lightweight.xml",
+        "ref/dotnet5.1/zh-hans/System.Reflection.Emit.Lightweight.xml",
+        "ref/dotnet5.1/zh-hant/System.Reflection.Emit.Lightweight.xml",
         "ref/net45/_._",
         "ref/wp80/_._",
-        "System.Reflection.Emit.Lightweight.4.0.0.nupkg",
-        "System.Reflection.Emit.Lightweight.4.0.0.nupkg.sha512",
+        "runtimes/aot/lib/netcore50/_._",
+        "System.Reflection.Emit.Lightweight.4.0.1-beta-23516.nupkg",
+        "System.Reflection.Emit.Lightweight.4.0.1-beta-23516.nupkg.sha512",
         "System.Reflection.Emit.Lightweight.nuspec"
       ]
     },
@@ -18735,7 +19327,8 @@
       "Microsoft.Extensions.Logging.Console >= 1.0.0-rc1-final",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 1.0.0-rc1-*",
       "Microsoft.VisualStudio.Web.BrowserLink.Loader >= 14.0.0-rc1-final",
-      "Microsoft.Extensions.Logging.Debug >= 1.0.0-rc1-final"
+      "Microsoft.Extensions.Logging.Debug >= 1.0.0-rc1-final",
+      "Microsoft.ApplicationInsights.AspNet >= 1.0.0-rc1"
     ],
     "DNX,Version=v4.5.1": [
       "System.Net.Http >= 4.0.1-beta-23516",
